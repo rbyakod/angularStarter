@@ -48,3 +48,26 @@ app.controller("CountAmountController", function($scope){
 
 
 
+/**  parent child relationship in scope variable  */
+app.controller( "ParentController", function($scope){
+    $scope.title = "Title set in PARENT";
+});
+
+app.controller( "ChildController", function($scope){
+    $scope.title = "Title set in CHILD";
+    $scope.childTitle = "CHILDtitle set in CHILD"
+});
+
+
+/**  show with inheritance and object properties */
+app.controller( "ParentController2", function($scope){
+    $scope.model = { title : "Title set in PARENT2"} ;
+});
+
+app.controller( "ChildController2", function($scope){
+    $scope.childTitle = "CHILDtitle set in CHILD2";
+    $scope.model.title = "xyx efg";
+});
+
+
+
